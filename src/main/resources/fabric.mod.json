@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "tyrmod",
+  "version": "${version}",
+  "name": "TyrMod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/tyrmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "space.greymuzzzle.mods.tyrmod.client.TyrmodDataGenerator"
+    ],
+    "client": [
+      "space.greymuzzzle.mods.tyrmod.client.TyrmodClient"
+    ],
+    "main": [
+      "space.greymuzzzle.mods.tyrmod.Tyrmod"
+    ]
+  },
+  "mixins": [
+    "tyrmod.mixins.json",
+    {
+      "config": "tyrmod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
