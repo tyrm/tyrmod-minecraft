@@ -37,7 +37,9 @@ public class ModBlocks {
     public static void registerModBlocks() {
         SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs",
                 settings -> new StairsBlock(Blocks.SMOOTH_STONE.getDefaultState(), settings),
-                AbstractBlock.Settings.copy(Blocks.SMOOTH_STONE));
+                AbstractBlock.Settings.create()
+                        .strength(0.25f, 6.0f)  // Testing 0.25f for 1-second break time
+                        .sounds(net.minecraft.sound.BlockSoundGroup.STONE));
         
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(SMOOTH_STONE_STAIRS);
