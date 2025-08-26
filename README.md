@@ -1,5 +1,8 @@
 # TyrMod
 
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Claude Logo](https://img.shields.io/badge/Claude-D97757?label=generated%20with)](https://claude.ai/code)
+
 A Minecraft mod that adds custom blocks and items.
 
 ## Features
