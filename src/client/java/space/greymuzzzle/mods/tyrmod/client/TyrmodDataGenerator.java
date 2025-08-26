@@ -3,6 +3,7 @@ package space.greymuzzzle.mods.tyrmod.client;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import space.greymuzzzle.mods.tyrmod.datagen.ModRecipeProvider;
+import space.greymuzzzle.mods.tyrmod.datagen.ModLootTableProvider;
 
 public class TyrmodDataGenerator implements DataGeneratorEntrypoint {
 
@@ -10,5 +11,6 @@ public class TyrmodDataGenerator implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(ModRecipeProvider::new);
+        pack.addProvider(ModLootTableProvider::new);
     }
 }
